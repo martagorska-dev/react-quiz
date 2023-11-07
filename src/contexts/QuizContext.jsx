@@ -78,7 +78,7 @@ function QuizProvider({ children }) {
   );
 
   useEffect(function () {
-    fetch('https://react-quiz-json-server-martagorska.vercel.app/questions')
+    fetch('https://react-quiz-json-server-martagorska.onrender.com/questions')
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'dataReceived', payload: data }))
       .catch((err) => dispatch({ type: 'dataFailed' }));
